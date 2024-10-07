@@ -6,7 +6,7 @@ import (
 )
 
 // users_routes defines the routes for the users
-func users_routes(e *echo.Echo) {
+func usersRoutes(e *echo.Echo) {
 	e.POST("/users", users.CreateUser)       // 1: Create User
 	e.DELETE("/users/:id", users.DeleteUser) // 2: Delete User
 	e.PUT("/users/:id", users.UpdateUser)    // 3: Update User

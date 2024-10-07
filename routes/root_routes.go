@@ -5,6 +5,6 @@ import (
 	"github.com/pabloCode010/database_programming_project/controllers/root"
 )
 
-func root_routes(e *echo.Echo) {
+func rootRoutes(e *echo.Echo) {
 	e.GET("/helloworld", root.HelloWorld)
 }
