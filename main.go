@@ -15,6 +15,9 @@ func init() {
 func main() {
 	e := echo.New()
 
+	// Static files
+	e.Static("/public", "public")
+
 	// EnableRoutes(e)
 	routes.EnableRoutes(e)
 

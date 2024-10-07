@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans';
+    background-color: #fffcf2;
+    color: #252422;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.flex-container .flex-item {
+    padding: 20px 50px;
+}
+
+.left {
+    flex: 2;
+    background-color: #efeeee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    background-image: url("/public/images/background.png");
+    background-size: cover;
+}
+
+.left h1 {
+    font-size: 1.75rem;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.left .description {
+    max-width: 550px;
+    font-weight: 300;
+}
+
+.left .name {
+    font-weight: 500;
+    font-weight: 300;
+}
+
+.left .logo {
+    height: 190px;
+}
+
+.right {
+    flex: 1.2;
+}
+
+.goBack {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+} 
+
+.goBack a { 
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #efeeee;
+}
+
+.goBack a:hover,
+.goBack a:active {
+    background-color: #e0e0e0;
+}
+
+.goBack span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+.header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #252422;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #403d39;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+.form .field {
+    margin-bottom: 15px;
+}
+
+.form .field label {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.form .field input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc5b9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form .field input:focus {
+    border-color: #eb5e28;
+}
+
+.form .field-password {
+    position: relative;
+}
+
+.form .field-password .visibility-icon {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+}
+
+.form .field-password .visibility-icon:hover {
+    cursor: pointer;
+}
+
+.form .forgotPassword {
+    display: flex;
+    justify-content: end;
+    margin: 15px 0;
+}
+
+.form .forgotPassword a {
+    font-size: 0.75rem;
+}
+
+.form .submit {
+    border-bottom: 1px solid #ccc5b9;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.form .submit button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 45px;
+    border-radius: 18px;
+    background-color: #eb5e28;
+    border: none;
+    color: white;
+}
+
+.form .submit button:hover,
+.form .submit button:active {
+    cursor: pointer;
+    background-color: #d94e1f;
+}
+
+.register {
+    padding: 40px 30px;
+    background-color: #efeeee;
+    border-radius: 8px;
+    color: #403d39;
+}
+
+.link {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #252422;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+
+@media (max-width: 990px) {
+    .goBack {
+        padding: 15px;
+        border-bottom: 1px solid #ccc5b9;
+        margin-bottom: 0px;
+    }
+
+    .card {
+        padding: 20px 50px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-container .right {
+        padding: 0px;
+    }
+
+    .flex-container .left {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        padding: 40px 30px;
+    }
+
+    .form .field input {
+        border-width: 2px;
+        padding: 14px;
+    }
+
+    .form .field-password .visibility-icon {
+        bottom: 7px;
+    }
+
+    .form .submit button {
+        width: 100%;
+        border-radius: 8px;
+        padding: 14px;
+    }
+
+    .form .forgotPassword{
+        margin: 20px 0;
+    }
+
+    .right h2, .right p {
+        text-align: center;
+    }
+}

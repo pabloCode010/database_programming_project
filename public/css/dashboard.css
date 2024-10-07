@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    color: #252422;
+}
+
+.container {
+    margin: 40px;
+}
+
+.container .dashboard {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.container .dashboard .dashboard-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    margin-bottom: 20px;
+}
+
+.container .dashboard .search-bar {
+    display: flex;
+    gap: 8px;
+}
+
+.container .dashboard .search-bar .search-input {
+    flex: 1;
+}
+
+.container .dashboard #new-user-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    gap: 8px;
+}
+
+.container .dashboard #new-user-form .input {
+    flex: 1;
+    min-width: 80px;
+}
+
+.container .dashboard .table-container {
+    margin: 40px 0;
+    overflow-x: auto;
+}
+
+.container .dashboard .table-container .table {
+    font-size: 0.9rem;
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+.container .dashboard .table-container .table th, 
+.container .dashboard .table-container .table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.container .dashboard .table-container .table th {
+    color: #868183;
+    font-weight: 600;
+}
+
+.container .dashboard .table-container .table td .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.container .dashboard .table-container .table td .buttons .action-button {
+    padding: 7px 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.container .dashboard .table-container .table td .buttons .action-button:hover {
+    background-color: #f0f0f0;
+}
+
+.container .dashboard .table-container .table td .buttons .action-button:active {
+    background-color: #e0e0e0;
+}
+
+.container .dashboard .table-container .table td .buttons .action-button .material-symbols-outlined {
+    font-size: 1.3rem;
+}
+
+.container .dashboard .table-container .table {
+    padding: 0 40px;
+}
+
+.container .dashboard .table-container .table tr:hover {
+    background-color: #fAfAfA;
+}
+
+
+input,
+select,
+button,
+.input::placeholder {
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    outline-offset: 2px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input::placeholder {
+    color: #a0a0a0;
+}
+
+
+.input:focus {
+    outline: 2px solid #a0a0a0;
+}
+
+select.input {
+    color: #252422;
+}
+
+.button {
+    padding: 10px;
+    background-color: #efeeee;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+.button:active {
+    background-color: #d0d0d0;
+}
+
+.truncated-text {
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
