@@ -6,9 +6,9 @@ import (
 )
 
 // users_routes defines the routes for the users
-func usersRoutes(e *echo.Echo) {
-	e.POST("/users", users.CreateUser)       // 1: Create User
-	e.DELETE("/users/:id", users.DeleteUser) // 2: Delete User
-	e.PUT("/users/:id", users.UpdateUser)    // 3: Update User
-	e.GET("/users", users.GetUSers)          // 4: Get Users or Filter
+func usersRoutes(apiPath *echo.Group) {
+	apiPath.POST("/users", users.CreateUser)       // 1: Create User
+	apiPath.DELETE("/users/:id", users.DeleteUser) // 2: Delete User
+	apiPath.PUT("/users/:id", users.UpdateUser)    // 3: Update User
+	apiPath.GET("/users", users.GetUSers)          // 4: Get Users or Filter
 }
