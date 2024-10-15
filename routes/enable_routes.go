@@ -9,4 +9,5 @@ func EnableRoutes(e *echo.Echo) {
 
 	api := e.Group("/api/v1")
 	usersRoutes(api)
+	genresRoutes(api)
 }
