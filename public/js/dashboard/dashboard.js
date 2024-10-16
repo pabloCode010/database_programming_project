@@ -9,6 +9,7 @@ field structure = {
   forSearch: boolean,
   editable: boolean,
   options: async () => [{label: string, value: string}]>
+  optionsType: string,
 }
 */
 
@@ -234,7 +235,13 @@ export class Dashboard {
     this.fields.forEach((field) => {
       const td = document.createElement("td");
       td.textContent = record[field.name];
-      tr.appendChild(td);
+
+      if (field.type === "select") {
+        const option = field.options.find((option) => option.value === record[field.name]);
+        td.textContent = option ? option.label : "";
+      }
+
+      tr.appendChild(td); 
     });
 
     const td = document.createElement("td");
@@ -329,7 +336,8 @@ export class Dashboard {
       const fieldElement = td.querySelector(".field");
       let value = fieldElement.value;
 
-      if (field.type === "number") {
+      // convert number fields to number type
+      if (field.type === "number"  || (field.type === "select" && field.optionsType === "number")) {
         value = Number(value);
       }
 
@@ -359,6 +367,14 @@ export class Dashboard {
       e.preventDefault();
       const formData = new FormData(this.createForm);
       const record = Object.fromEntries(formData.entries());
+
+      // convert number fields to number type
+      this.fields.forEach((field) => {
+        if (field.type === "number"  || (field.type === "select" && field.optionsType === "number")) {
+          record[field.name] = Number(record[field.name]);
+        }
+      });
+      
       const { message, record: newRecord } = await this.onCreate(record);
       alertSuccess(message);
       this.createForm.reset();
