@@ -90,7 +90,6 @@ body {
 
 .dashboard-container .dashboard .table-container .table td .buttons-group {
     display: flex;
-    justify-content: center;
     gap: 8px;
 }
 
@@ -137,6 +136,7 @@ body {
     border-radius: 5px;
     outline-offset: 2px;
     background-color: #fff;
+    min-width: 45px;
     width: 100%;
     box-sizing: border-box;
 }
