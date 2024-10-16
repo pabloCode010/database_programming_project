@@ -80,10 +80,11 @@ const role = {
   forSearch: true,
   editable: true,
   options: async () => [
-    { label: "Usuario", value: "USUARIO" },
-    { label: "Administrador", value: "ADMINISTRADOR" },
-    { label: "Empleado", value: "EMPLEADO" },
+    { label: "USUARIO", value: "USUARIO" },
+    { label: "ADMINISTRADOR", value: "ADMINISTRADOR" },
+    { label: "EMPLEADO", value: "EMPLEADO" },
   ],
+  optionsType: "text",
   emptyOption: "Selecciona un rol",
 };
 
