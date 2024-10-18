@@ -42,8 +42,17 @@ func SignIn(ctx echo.Context) error {
 		HttpOnly: true,
 	})
 
+	var redirect string
+
+	switch *user.Role {
+	case "ADMINISTRADOR":
+		redirect = "/dashboard"
+	case "USUARIO":
+		redirect = "/home"
+	}
+
 	return ctx.JSON(http.StatusOK, echo.Map{
 		"message":  "Autenticación exitosa",
-		"redirect": "/home",
+		"redirect": redirect,
 	})
 }
