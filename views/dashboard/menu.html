@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img class="logo" src="/public/images/logo.png" alt="">
+            <h2>Cine Admin</h2>
+        </div>
+        <a href="/auth/logout">Cerrar Sesión</a>
+    </header>
+    <main>
+        <h1>Panel de Administración</h1>
+        <div class="cards-container">
+            <a class="card" href="/dashboard/movies">
+                <h3 class="card-title">Películas</h3>
+                <p class="card-description">Administrar catálogo de películas</p>
+            </a>
+
+            <a class="card" href="/dashboard/users">
+                <h3 class="card-title">Usuarios</h3>
+                <p class="card-description">Gestionar cuentas y roles de usuarios</p>
+            </a>
+
+            <a class="card" href="/dashboard/genres">
+                <h3 class="card-title">Genéros</h3>
+                <p class="card-description">Administrar catálogo de generos de películas</p>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
