@@ -84,9 +84,9 @@ genresDashboard.SetOnDeleteHandler(async (record) => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
-    genresDashboard.Render();
+    await genresDashboard.Render();
 
-    fetch("/api/v1/genres")
-        .then((response) => response.json())
-        .then((data) => genresDashboard.AppendRecords(...data.genres));
+    const  respone = await fetch("/api/v1/genres");
+    const { genres } = await respone.json();
+    genresDashboard.LoadRecords(...genres);
 });

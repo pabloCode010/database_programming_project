@@ -154,10 +154,10 @@ usersDashboard.SetOnDeleteHandler(async (record) => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  usersDashboard.Render();
+document.addEventListener("DOMContentLoaded", async () => {
+  await usersDashboard.Render();
 
-  fetch("/api/v1/users")
-    .then((response) => response.json())
-    .then((data) => usersDashboard.AppendRecords(...data.users));
+  const respone = await fetch("/api/v1/users")
+  const { users } = await respone.json();
+  usersDashboard.AppendRecords(...users);
 });

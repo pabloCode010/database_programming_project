@@ -118,9 +118,9 @@ moviesDashboard.SetOnDeleteHandler(async (record) => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
-  moviesDashboard.Render();
+  await moviesDashboard.Render();
 
-  fetch("/api/v1/movies")
-    .then((response) => response.json())
-    .then((data) => moviesDashboard.AppendRecords(...data.movies));
+  const response = await fetch("/api/v1/movies");
+  const { movies } = await response.json();
+  moviesDashboard.AppendRecords(...movies);
 });
