@@ -88,5 +88,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const  respone = await fetch("/api/v1/genres");
     const { genres } = await respone.json();
-    genresDashboard.LoadRecords(...genres);
+    genresDashboard.AppendRecords(...genres);
 });
