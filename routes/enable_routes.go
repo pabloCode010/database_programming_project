@@ -20,4 +20,5 @@ func EnableRoutes(e *echo.Echo) {
 	usersRoutes(api)
 	genresRoutes(api)
 	moviesRoutes(api)
+	showtimesRoutes(api)
 }
